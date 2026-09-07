@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>תקציב ועד כיתה ג׳</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Tahoma,sans-serif;background:#f0f4f8;color:#1a1a2e;padding:20px;direction:rtl}
+.container{max-width:900px;margin:0 auto}
+h1{text-align:center;color:#16213e;margin-bottom:8px;font-size:1.8em}
+.subtitle{text-align:center;color:#666;margin-bottom:24px;font-size:0.95em}
+.summary-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:28px}
+.card{background:#fff;border-radius:12px;padding:18px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.card .num{font-size:1.8em;font-weight:700;color:#0f3460}
+.card .label{font-size:.85em;color:#666;margin-top:4px}
+.card.green .num{color:#27ae60}
+.card.orange .num{color:#e67e22}
+.card.blue .num{color:#2980b9}
+
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:24px}
+th{background:#16213e;color:#fff;padding:12px 14px;font-size:.9em;text-align:right}
+td{padding:10px 14px;border-bottom:1px solid #eee;font-size:.9em}
+tr:last-child td{border-bottom:none}
+.total-row{background:#f8f9fa;font-weight:700}
+.total-row td{border-top:2px solid #16213e}
+
+.section-title{font-size:1.15em;font-weight:700;color:#16213e;margin:20px 0 10px;padding-right:4px;border-right:4px solid #e94560;padding-right:12px}
+
+.plan-table td:first-child{font-weight:600;color:#16213e}
+.emoji{font-size:1.1em}
+
+@media(max-width:600px){
+  .summary-cards{grid-template-columns:1fr 1fr}
+  h1{font-size:1.4em}
+  td,th{padding:8px 10px;font-size:.82em}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>🎓 תקציב ועד כיתה ג׳ — תשפ״ז</h1>
+<p class="subtitle">35 תלמידים · מורה 1 · 5 סייעות · עלות לילד: 250 ₪</p>
+
+<!-- Summary Cards -->
+<div class="summary-cards">
+  <div class="card blue"><div class="num">8,750 ₪</div><div class="label">תקציב כולל</div></div>
+  <div class="card orange"><div class="num">7,550 ₪</div><div class="label">סה״כ הוצאות</div></div>
+  <div class="card green"><div class="num">1,200 ₪</div><div class="label">חיסכון לשנה הבאה</div></div>
+</div>
+
+<!-- Budget Breakdown -->
+<div class="section-title">🎁 מתנות לילדים</div>
+<table>
+<tr><th>אירוע</th><th>עלות ליחידה</th><th>כמות</th><th>סה״כ</th></tr>
+<tr><td>פורים — משלוח מנות</td><td>15 ₪</td><td>35</td><td>525 ₪</td></tr>
+<tr class="total-row"><td colspan="3">סה״כ מתנות לילדים</td><td>525 ₪</td></tr>
+</table>
+
+<div class="section-title">👩‍🏫 מתנות למורה</div>
+<table>
+<tr><th>אירוע</th><th>סוג</th><th>עלות</th></tr>
+<tr><td>🍎 ראש השנה</td><td>גיפט קארד</td><td>150 ₪</td></tr>
+<tr><td>🎭 פורים</td><td>משלוח מנות + מתנה</td><td>150 ₪</td></tr>
+<tr><td>🫓 פסח</td><td>גיפט קארד</td><td>150 ₪</td></tr>
+<tr><td>🎓 סוף שנה</td><td>גיפט קארד</td><td>200 ₪</td></tr>
+<tr class="total-row"><td colspan="2">סה״כ מתנות למורה</td><td>650 ₪</td></tr>
+</table>
+
+<div class="section-title">🤝 מתנות לסייעות (5)</div>
+<table>
+<tr><th>אירוע</th><th>עלות לסייעת</th><th>סה״כ (×5)</th></tr>
+<tr><td>🍎 ראש השנה — גיפט קארד</td><td>100 ₪</td><td>500 ₪</td></tr>
+<tr><td>🎭 פורים</td><td>80 ₪</td><td>400 ₪</td></tr>
+<tr><td>🫓 פסח</td><td>100 ₪</td><td>500 ₪</td></tr>
+<tr><td>🎓 סוף שנה</td><td>100 ₪</td><td>500 ₪</td></tr>
+<tr class="total-row"><td>סה״כ מתנות לסייעות</td><td></td><td>1,900 ₪</td></tr>
+</table>
+
+<div class="section-title">🎉 מסיבת סיום סוף שנה</div>
+<table>
+<tr><th>פריט</th><th>פירוט</th><th>עלות</th></tr>
+<tr><td>הפעלה / אטרקציה</td><td>בריכה / פעילות כיתתית</td><td>2,500 ₪</td></tr>
+<tr><td>כיבוד + אביזרים</td><td>פיצות, שתייה, חד פעמי</td><td>775 ₪</td></tr>
+<tr class="total-row"><td colspan="2">סה״כ מסיבת סיום</td><td>3,275 ₪</td></tr>
+</table>
+
+<div class="section-title">📊 סיכום תקציב</div>
+<table>
+<tr><th>קטגוריה</th><th>סכום</th></tr>
+<tr><td>תקציב כולל (35 × 250 ₪)</td><td>8,750 ₪</td></tr>
+<tr><td>מתנות לילדים</td><td>525 ₪</td></tr>
+<tr><td>מתנות למורה</td><td>650 ₪</td></tr>
+<tr><td>מתנות לסייעות</td><td>1,900 ₪</td></tr>
+<tr><td>מסיבת סיום סוף שנה</td><td>3,275 ₪</td></tr>
+<tr style="background:#e8f5e9;font-weight:700"><td>חיסכון לשנה הבאה</td><td>1,200 ₪</td></tr>
+<tr class="total-row"><td>סה״כ (הוצאות + חיסכון)</td><td>7,550 ₪ + 1,200 ₪ = 8,750 ₪</td></tr>
+</table>
+
+<div class="section-title">📅 תוכנית שנתית</div>
+<table class="plan-table">
+<tr><th>חג / אירוע</th><th>ילדים</th><th>מורה</th><th>סייעות</th></tr>
+<tr><td>🍎 ראש השנה</td><td>—</td><td>גיפט קארד 150 ₪</td><td>גיפט קארד 100 ₪</td></tr>
+<tr><td>🎭 פורים</td><td>משלוח מנות 15 ₪</td><td>מתנה 150 ₪</td><td>מתנה 80 ₪</td></tr>
+<tr><td>🫓 פסח</td><td>—</td><td>גיפט קארד 150 ₪</td><td>גיפט קארד 100 ₪</td></tr>
+<tr><td>🎓 סוף שנה</td><td>מסיבת סיום</td><td>גיפט קארד 200 ₪</td><td>מתנה 100 ₪</td></tr>
+</table>
+
+<p style="text-align:center;color:#999;margin-top:32px;font-size:.8em">ועד הורים כיתה ג׳ · נוצר ע״י ג׳וני צדקה 🧭</p>
+</div>
+</body>
+</html>
