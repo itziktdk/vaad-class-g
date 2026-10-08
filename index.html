@@ -30,6 +30,10 @@ tr:last-child td{border-bottom:none}
 .plan-table td:first-child{font-weight:600;color:#16213e}
 .emoji{font-size:1.1em}
 
+.tabs{display:flex;gap:8px;justify-content:center;margin-bottom:22px}
+.tab-btn{border:0;background:#fff;color:#16213e;padding:10px 22px;border-radius:999px;font:inherit;font-weight:700;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.tab-btn.active{background:#16213e;color:#fff}
+tr.unpaid td{background:#fdecec}
 @media(max-width:600px){
   .summary-cards{grid-template-columns:1fr 1fr}
   h1{font-size:1.4em}
@@ -43,6 +47,8 @@ tr:last-child td{border-bottom:none}
 <h1>🎓 תקציב ועד כיתה ג׳ — תשפ״ז</h1>
 <p class="subtitle">34 תלמידים (משלמים) · 35 ילדים בכיתה · מורה 1 · 5 סייעות · עלות לילד: 260 ₪</p>
 
+<div class="tabs"><button class="tab-btn" data-tab="budget">📊 תקציב</button><button class="tab-btn" data-tab="payments">💳 תשלומים</button></div>
+<div id="tab-budget" class="tab-panel">
 <!-- Summary Cards -->
 <div class="summary-cards">
   <div class="card blue"><div class="num">8,840 ₪</div><div class="label">תקציב כולל</div></div>
@@ -117,7 +123,26 @@ tr:last-child td{border-bottom:none}
 <tr><td>🎓 סוף שנה</td><td>מסיבת סיום</td><td>גיפט קארד 400 ₪</td><td>מתנה 150 ₪</td></tr>
 </table>
 
+</div>
+<div id="tab-payments" class="tab-panel" hidden>
+<div class="summary-cards">
+  <div class="card green"><div class="num">7,540 ₪</div><div class="label">סה״כ שולם</div></div>
+  <div class="card blue"><div class="num">29</div><div class="label">שילמו</div></div>
+  <div class="card orange"><div class="num">7</div><div class="label">טרם שילמו</div></div>
+</div>
+<div class="section-title">💳 מעקב תשלומי ועד</div>
+<table>
+<tr><th>#</th><th>שם הילד/ה</th><th>שילם ועד?</th><th>סכום ששולם</th></tr>
+<tr class=""><td>1</td><td>אמלי אביב</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>2</td><td>מרום אהרן</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class="unpaid"><td>3</td><td>רות אוקבמיכאל</td><td>❌ טרם שילם</td><td>—</td></tr><tr class="unpaid"><td>4</td><td>חיים אקלו</td><td>❌ טרם שילם</td><td>—</td></tr><tr class=""><td>5</td><td>אלירז בן שמעון</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class="unpaid"><td>6</td><td>מילאן כפיר ברוכים</td><td>❌ טרם שילם</td><td>—</td></tr><tr class=""><td>7</td><td>מריה ברוק</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class="unpaid"><td>8</td><td>יוסאן גברה</td><td>❌ טרם שילם</td><td>—</td></tr><tr class=""><td>9</td><td>מירון גולובב</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>10</td><td>מתן גם זו לטובה</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>11</td><td>ארבל דדון</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class="unpaid"><td>12</td><td>ליילה שמחה הסנובה</td><td>❌ טרם שילם</td><td>—</td></tr><tr class=""><td>13</td><td>שלי ורסנו</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class="unpaid"><td>14</td><td>הודיה טסמה</td><td>❌ טרם שילם</td><td>—</td></tr><tr class=""><td>15</td><td>דון יוצר</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>16</td><td>רומי ימין</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>17</td><td>יאן יצחק</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class="unpaid"><td>18</td><td>נועם יצחק</td><td>❌ טרם שילם</td><td>—</td></tr><tr class=""><td>19</td><td>ניב כהן</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>20</td><td>אלמה כהן ברכה</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>21</td><td>עומרי מוגרבי</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>22</td><td>מאורי מרחיב</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>23</td><td>איב עוזר</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>24</td><td>איתן עיני</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>25</td><td>עידו אברהם עמר</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>26</td><td>בר חיים פוניס</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>27</td><td>גאיה צדקה</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>28</td><td>עילאי קאדר</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>29</td><td>אמה קדמי דמרי</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>30</td><td>אמה קנבסקי רצון</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>31</td><td>נויה שחר</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>32</td><td>נועם שפירא דרוץ</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>33</td><td>לורן מרים שריקי</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>34</td><td>הדר ששוני</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>35</td><td>מאור ששוני</td><td>✅ שילם</td><td>260 ₪</td></tr><tr class=""><td>36</td><td>רפאל תמם</td><td>✅ שילם</td><td>260 ₪</td></tr>
+<tr class="total-row"><td colspan="3">סה״כ שולם (29 מתוך 36)</td><td>7,540 ₪</td></tr>
+</table>
+</div>
 <p style="text-align:center;color:#999;margin-top:32px;font-size:.8em">ועד הורים כיתה ג׳ · נוצר ע״י ג׳וני צדקה 🧭</p>
 </div>
+<script>
+function showTab(t){document.querySelectorAll('.tab-panel').forEach(p=>p.hidden=p.id!=='tab-'+t);document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active',b.dataset.tab===t));history.replaceState(null,'','#'+t)}
+document.querySelectorAll('.tab-btn').forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
+const fromHash=()=>showTab(location.hash==='#payments'?'payments':'budget');window.addEventListener('hashchange',fromHash);fromHash();
+</script>
 </body>
 </html>
